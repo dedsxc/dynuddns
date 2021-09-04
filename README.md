@@ -1,6 +1,6 @@
 # dynuddns
 
-Tool to update automatically ipv4 address linked to dynu ddns hostname (https://www.dynu.com/Support/API)
+Tool to update automatically ipv4 address linked to dynu ddns hostname (https://www.dynu.com/)
 
 ## Install
 
