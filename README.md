@@ -7,9 +7,11 @@ Tool to update automatically ipv4 address linked to dynu ddns hostname
 https://github.com/dedsxc/dynuddns
 
 Modify variable
+```py
 self.dynu_id = your_hostname_id
 self.dynu_hostname = "your_hostname"
-self.api_key = "your_dynu_api_key"
+self.api_key = "your_dynu_api_key" 
+```
 
 ### Change access right
 chmod 744 dynuddns.py
