@@ -31,11 +31,11 @@ class Dynu:
             if domain['id'] == self.dynu_id:
                 self.dynu_ipv4 = domain['ipv4Address']
 
-    def _compare_data(self):
+    def _is_different(self):
         if self.dynu_ipv4 == self.public_ip:
-            return True
-        else:
             return False
+        else:
+            return True
     
     def _update(self):
         json_data = {
@@ -58,8 +58,7 @@ class Dynu:
     def process(self):
         self._get_public_ip()
         self._get_data_from_dynu()
-        self._compare_data()
-        if not self._compare_data():
+        if self._is_different():
             self._update()
         else:
             print("{} : [-] Nothing to change.".format(self.now))
